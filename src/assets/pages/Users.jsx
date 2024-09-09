@@ -15,7 +15,7 @@ const EditproductsPage = () => {
     useEffect(() => {
         const fetchProduct = async () => {
           try {
-            const response = await fetch(`http://localhost:3000/adminpanelroutes/users`);
+            const response = await fetch(`https://newkartbackend-1.onrender.com/adminpanelroutes/users`);
             const data = await response.json();
             setUsers(data);
             console.log(data,"this is working")
@@ -35,7 +35,7 @@ const EditproductsPage = () => {
 
       const fetchProduct = async () => {
         try {
-          const response = await fetch(`http://localhost:3000/adminpanelroutes/users`);
+          const response = await fetch(`https://newkartbackend-1.onrender.com/adminpanelroutes/users`);
           const data = await response.json();
           setUsers(data);
           console.log(data,"this is working")
@@ -62,7 +62,7 @@ const EditproductsPage = () => {
 
       try{
 
-        const response = await axios.delete( `http://localhost:3000/adminpanelroutes/deleteuser?id=${id}`)
+        const response = await axios.delete( `https://newkartbackend-1.onrender.com/adminpanelroutes/deleteuser?id=${id}`)
 
         fetchProduct()
         if (response.status === 200) {
