@@ -19,7 +19,7 @@ function SellerAccount() {
 
     const handleSignout = async ()=>{
         try {
-            await fetch('http://localhost:3000/adminauth/signout', {
+            await fetch('https://newkartbackend-1.onrender.com/adminauth/signout', {
                 method: 'GET',
                 credentials: 'include', 
             });

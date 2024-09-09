@@ -19,7 +19,7 @@ const SellerOrders = () => {
     useEffect(() => {
         const fetchProduct = async () => {
           try {
-            const response = await fetch(`http://localhost:3000/adminpanelroutes/searchorders`);
+            const response = await fetch(`https://newkartbackend-1.onrender.com/adminpanelroutes/searchorders`);
             const data = await response.json();
             setProduct(data);
             console.log(data,"this is working")
@@ -54,7 +54,7 @@ const SellerOrders = () => {
     
       try {
         const response = await axios.get(
-          `http://localhost:3000/adminpanelroutes/filterorders`,
+          `https://newkartbackend-1.onrender.com/adminpanelroutes/filterorders`,
           {
             params: {
               category: filters.category,
